@@ -155,7 +155,7 @@ class Attendance(models.Model):
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     date = models.DateField()
     status = models.CharField(max_length=10, choices=[('present','Presente'), ('absent','Ausente'), ('late','Tarde')])
-    justreasonification = models.TextField(
+    reason = models.TextField(
         blank=True,  
         null=True,   
         help_text="Motivo de la ausencia o tardanza, si aplica."
